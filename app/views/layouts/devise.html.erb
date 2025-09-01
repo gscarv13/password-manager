@@ -24,12 +24,10 @@
 
   <body>
     <div class="vh-100">
+      <%= render(partial: 'shared/flash') %>
+      <%= render(partial: 'shared/navbar') if account_page?%>
       <div class="h-100 container d-flex flex-column justify-content-center align-items-center">
-        <%= link_to(root_path, class: 'navbar-brand') do %>
-          <h2>
-            <i class="bi bi-safe2 me-2"></i>SafePass
-          </h2>
-        <% end %>
+        <%= logo unless account_page? %>
         <div class="card card--auth shadow-sm w-100">
           <div class="card-body">
             <%= yield %>

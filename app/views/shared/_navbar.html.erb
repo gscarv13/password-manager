@@ -1,8 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
   <div class="container">
-    <%= link_to( root_path, class: 'navbar-brand') do %>
-      <i class="bi bi-safe2 me-2"></i>SafePass
-    <% end %>
+    <%= logo('h4') %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,14 +10,35 @@
             <%= link_to('About', about_path, class: 'nav-link')%>
         </li>
       </ul>
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            <%= link_to('Sign in', new_user_session_path, class: 'nav-link')%>
-        </li>
-        <li class="nav-item">
-          <%= link_to('Sign up', new_user_registration_path, class: 'nav-link')%>
-        </li>
-      </ul>
+      <% if user_signed_in? %>
+        <div class="dropdown">
+          <a class="nav-link btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-circle"></i>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+            <li>
+              <h6 class="dropdown-header">
+                Signed in as: </br> <%= current_user.email %>
+              </h6>
+            </li>
+            <li> <%= link_to('Account', edit_user_registration_path, class: 'dropdown-item') %> </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <%= link_to('Sign out', destroy_user_session_path, class: "dropdown-item", data: { turbo_method: :delete }) %>
+            </li>
+          </ul>
+        </div>
+      <% else %>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <%= link_to('Sign in', new_user_session_path, class: 'nav-link')%>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Sign up', new_user_registration_path, class: 'nav-link')%>
+          </li>
+        </ul>
+      <% end %>
     </div>
   </div>
 </nav>
