@@ -3,6 +3,7 @@ class EntriesController < ApplicationController
 
   def index
     @entries = current_user.entries
+    @main_entry = current_user.entries.first
   end
 
   def new
@@ -18,7 +19,11 @@ class EntriesController < ApplicationController
 
     if @entry.save
       flash[:notice] = "Entry has been saved"
-      redirect_to root_path
+
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.turbo_stream { }
+      end
     else
       flash[:alert] = "An issue happened while saving the entry"
       render :new, status: :unprocessable_entity
