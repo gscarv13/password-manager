@@ -1,8 +1,16 @@
 class EntriesController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @entries = current_user.entries
+  end
+
   def new
     @entry = Entry.new
+  end
+
+  def show
+    @entry = current_user.entries.find(params[:id])
   end
 
   def create
