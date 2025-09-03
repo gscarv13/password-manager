@@ -5,4 +5,10 @@
 import { application } from "./application"
 
 import ToastController from "./toast_controller"
+import SearchController from "./search_controller"
+import ClipboardController from "./clipboard_controller"
+
 application.register("toast", ToastController)
+application.register("search", SearchController)
+application.register("clipboard", ClipboardController)
+
