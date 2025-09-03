@@ -7,8 +7,10 @@ import { application } from "./application"
 import ToastController from "./toast_controller"
 import SearchController from "./search_controller"
 import ClipboardController from "./clipboard_controller"
+import TogglePasswordController from "./toggle_password_controller"
 
 application.register("toast", ToastController)
 application.register("search", SearchController)
 application.register("clipboard", ClipboardController)
+application.register("toggle-password", TogglePasswordController)
 

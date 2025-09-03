@@ -7,4 +7,6 @@ export function buildIcon(iconName) {
 
 export const checkIcon = "bi-clipboard2-check";
 export const clipBoardIcon = "bi-clipboard-plus";
+export const eyeIcon = "bi-eye"
+export const eyeClosedIcon = "bi-eye-slash"
 
