@@ -1,23 +1,59 @@
 <div class="row">
-  <div class="entries-actions card">
-    <div class="entry-search" data-controller="search">
-      <%= form_with(url: entries_path, method: :get, data: { turbo_frame: "search-results" }, class: "position-relative") do |form| %>
+  <header class="d-flex entries-actions align-items-center w-100 px-2 py-4">
+    <%= link_to(new_entry_path, class: 'btn btn-brand py-2 px-4 rounded-4 d-flex align-items-center gap-3', data: { turbo_frame: 'main-dashboard' }) do %>
+      <i class="bi bi-plus-lg icon-bold fs-4"></i>
+      <span class="fw-bold">Add New</span>
+    <% end %>
+
+    <div class="ms-4 flex-grow-1">
+      <div class="entry-search" data-controller="search">
+        <%= form_with(url: entries_path, method: :get, data: { turbo_frame: "search-results" }, class: "position-relative") do |form| %>
         <div class="form-floating">
-          <%= form.text_field(:name, placeholder: "search", class: "form-control", data: { action: "input->search#toggleClearButton"}) %>
+          <%= form.text_field(:name, placeholder: "search", class: "form-control rounded-4 shadow-sm border-0", data: { action: "input->search#toggleClearButton"}) %>
           <%= form.label(:search, for: :name)%>
         </div>
         <div class="entry-search-button">
           <%= link_to(root_path, class: 'btn btn-sm btn-outline-danger rounded-circle p-0 lh-1 me-2 d-none', data: { search_target: "clearButton" }) do %>
             <i class="bi bi-x"></i>
           <% end %>
-          <%= form.button(class: "btn btn-primary")  do %>
+          <%= form.button(class: "btn btn-brand")  do %>
             <i class="bi bi-search"></i>
           <% end %>
         </div>
       <% end %>
+      </div>
     </div>
-    <%= link_to('+ New entry', new_entry_path, class: 'btn btn-primary', data: { turbo_frame: 'main-dashboard' })%>
-  </div>
+
+    <% if user_signed_in? %>
+      <div class="dropdown flex-end bg-brand p-2 rounded-4 text-white">
+        <a class="nav-link btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-fill fs-4"></i>
+        </a>
+
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+          <li>
+            <h6 class="dropdown-header">
+              Signed in as: </br> <%= current_user.email %>
+            </h6>
+          </li>
+          <li> <%= link_to('Account', edit_user_registration_path, class: 'dropdown-item') %> </li>
+          <li><hr class="dropdown-divider"></li>
+          <li>
+            <%= link_to('Sign out', destroy_user_session_path, class: "dropdown-item", data: { turbo_method: :delete }) %>
+          </li>
+        </ul>
+      </div>
+    <% else %>
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <%= link_to('Sign in', new_user_session_path, class: 'nav-link')%>
+        </li>
+        <li class="nav-item">
+          <%= link_to('Sign up', new_user_registration_path, class: 'nav-link')%>
+        </li>
+      </ul>
+    <% end %>
+  </header>
   <div id="dashboard" class="card shadow-sm">
     <div class="entries-card">
       <div class="entries-card__sidebar">

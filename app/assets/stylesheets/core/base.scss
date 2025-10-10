@@ -1,5 +1,5 @@
 body {
-  background: $gray-100;
+  background: $gray-200;
 }
 
 a.logo {
@@ -10,4 +10,55 @@ a.logo {
 
 .form-control.input-with-errors {
   border: 1px solid $danger;
+}
+
+.icon-bold {
+  -webkit-text-stroke: 2px;
+}
+
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d93764;
+  --bs-btn-border-color: #d93764;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #c12d5a;
+  --bs-btn-hover-border-color: #b52951;
+  --bs-btn-focus-shadow-rgb: 217, 55, 100;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #b52951;
+  --bs-btn-active-border-color: #a92649;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #d93764;
+  --bs-btn-disabled-border-color: #d93764;
+}
+
+.btn-outline-brand {
+  --bs-btn-color: #d93764;
+  --bs-btn-border-color: #d93764;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d93764;
+  --bs-btn-hover-border-color: #d93764;
+  --bs-btn-focus-shadow-rgb: 217, 55, 100;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #d93764;
+  --bs-btn-active-border-color: #d93764;
+  --bs-btn-disabled-color: #d93764;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #d93764;
+}
+
+.bg-brand {
+  --bs-bg-opacity: 1;
+  background-color: rgba(217, 55, 100, var(--bs-bg-opacity));
+}
+
+.text-brand {
+  --bs-text-opacity: 1;
+  color: rgba(217, 55, 100, var(--bs-text-opacity));
+}
+
+.border-brand {
+  --bs-border-opacity: 1;
+  border-color: rgba(217, 55, 100, var(--bs-border-opacity));
 }
