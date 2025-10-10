@@ -22,7 +22,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body class="<%= controller_name %> <%= action_name %>">
+  <body class="<%= controller_name %> <%= action_name %> d-flex d-flex-row">
     <%= render(partial: 'shared/navbar') %>
     <div id="flash">
       <%= render(partial: 'shared/flash') %>

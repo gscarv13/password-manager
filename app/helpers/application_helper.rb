@@ -1,7 +1,7 @@
 module ApplicationHelper
   def logo(size = "h2")
-    link_to(root_path, class: "logo #{size}") do
-      content_tag(:i, nil, class: "bi bi-safe2 me-2") + "SafePass"
+    link_to(root_path, class: "logo #{size} d-flex align-items-center justify-content-center") do
+      content_tag(:i, nil, class: "bi bi-safe2 text-brand")
     end
   end
 
