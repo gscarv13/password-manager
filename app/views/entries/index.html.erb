@@ -1,4 +1,4 @@
-<div class="row">
+<div class="container">
   <header class="d-flex entries-actions align-items-center w-100 px-2 py-4">
     <%= link_to(new_entry_path, class: 'btn btn-brand py-2 px-4 rounded-4 d-flex align-items-center gap-3', data: { turbo_frame: 'main-dashboard' }) do %>
       <i class="bi bi-plus-lg icon-bold fs-4"></i>
@@ -54,18 +54,20 @@
       </ul>
     <% end %>
   </header>
-  <div id="dashboard" class="card shadow-sm">
-    <div class="entries-card">
-      <div class="entries-card__sidebar">
+
+  <div id="dashboard" class="d-flex dashboard-height">
+      <div class="bg-white shadow-sm me-2 rounded-3">
         <%= turbo_frame_tag("search-results") do %>
-          <nav id="entries-list" class="nav flex-column">
+          <nav id="entries-list" class="rounded-3 px-4 py-4 flex-column">
             <% if @entries.any? %>
               <%= render(@entries) %>
             <%end%>
           </nav>
         <% end %>
       </div>
-      <div class="entries-card__main">
+
+
+      <div class="card flex-grow-1 border-0 shadow-sm">
         <%= turbo_frame_tag('main-dashboard') do %>
           <% if @entries.any? %>
             <%= render(partial: 'entries/main', locals: { entry: @main_entry }) %>
@@ -75,5 +77,4 @@
         <% end %>
       </div>
     </div>
-  </div>
 </div>

@@ -1,8 +1,9 @@
-  <div class="d-flex align-items-center">
-    <div class="entry-favicon">
+  <div class="d-flex align-items-center border-bottom border-bottom-5 py-3">
+    <div class="entry-favicon me-3">
       <%= image_tag(
-        "https://f1.allesedv.com/16/#{URI.parse(entry.url).host}",
-          alt: entry.name
+        "https://www.google.com/s2/favicons?domain=#{URI.parse(entry.url).host}&sz=64",
+          alt: entry.name,
+          class: 'rounded-2'
       )%>
     </div>
     <%= yield %>
