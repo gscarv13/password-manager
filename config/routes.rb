@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, path: "/"
 
-  get "/home", to: "pages#home"
-  get "/about", to: "pages#about"
-
   namespace :api do
     namespace :v1 do
       post :auth, to: "auth#create"
-      resources :entries
+      resources :entries, only: %i[index]
     end
   end
 
