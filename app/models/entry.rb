@@ -17,7 +17,9 @@ class Entry < ApplicationRecord
   private
 
   def url_must_be_valid
-    unless url.include?("http" || "https")
+    return if url.blank?
+
+    unless url.include?("http://") || url.include?("https://")
       errors.add(:url, "must be valid")
     end
   end
