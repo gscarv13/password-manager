@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def format_time(time)
-    time.strftime("%m/%d/%Y, %I:%M %p")
+    time.strftime("%B, %-d %Y - %I:%M %p")
   end
 
   def render_flash_stream
