@@ -27,7 +27,12 @@
       <%= render(partial: 'shared/flash') %>
       <%= render(partial: 'shared/navbar') if account_page?%>
       <div class="h-100 container d-flex flex-column justify-content-center align-items-center">
-        <%= logo unless account_page? %>
+        <% unless account_page? %>
+          <div class="d-flex align-items-center justify-content-center">
+            <%= logo %>
+            <span class="ms-3 fw-bold fs-2 text-brand">SafePass</span>
+          </div>
+        <% end %>
         <div class="card card--auth shadow-sm w-100">
           <div class="card-body">
             <%= yield %>
