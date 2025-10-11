@@ -1,11 +1,11 @@
 <%= turbo_frame_tag("main-dashboard") do %>
-  <div class="d-flex align-items-center justify-content-between">
-    <h1>New entry</h1>
+  <div class="container d-flex align-items-center justify-content-between p-4 mt-4">
+    <h1>Add password</h1>
     <%= link_to('Cancel', entries_path, class: 'btn btn-sm btn-outline-danger')%>
   </div>
   <div class="row">
     <div class="col">
-      <div class="card">
+      <div class="card m-3 border-0 shadow-sm">
         <div class="card-body">
           <% if @entry.errors.any? %>
             <div id="error_explanation" class="alert alert-danger">
@@ -37,7 +37,7 @@
               <%= form.text_field(:password, placeholder: "Password", class: "form-control") %>
               <%= form.label(:password) %>
             </div>
-            <%= form.submit('Create new entry', class: 'btn btn-primary') %>
+            <%= form.submit('Save', class: 'btn btn-brand') %>
           <% end %>
         </div>
       </div>
