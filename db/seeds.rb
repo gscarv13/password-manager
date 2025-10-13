@@ -1,6 +1,8 @@
 user = User.find_by(email: "test@test.com")
 user = User.create!(email: "test@test.com", password: "asdasd", password_confirmation: "asdasd") if user.nil?
 
+return unless user.entries.empty?
+
 entries = [
   {
     name: "Google",
