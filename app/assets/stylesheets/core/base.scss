@@ -1,3 +1,10 @@
+:root {
+  --brand-color: #d93764;
+  --brand-color-rgb: 217, 55, 100;
+  --brand-hover-color: #c12d5a;
+  --brand-active-color: #b52951;
+}
+
 body {
   background: $gray-200;
 }
@@ -18,47 +25,47 @@ a.logo {
 
 .btn-brand {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #d93764;
-  --bs-btn-border-color: #d93764;
+  --bs-btn-bg: var(--brand-color);
+  --bs-btn-border-color: var(--brand-color);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #c12d5a;
-  --bs-btn-hover-border-color: #b52951;
-  --bs-btn-focus-shadow-rgb: 217, 55, 100;
+  --bs-btn-hover-bg: var(--brand-hover-color);
+  --bs-btn-hover-border-color: var(--brand-active-color);
+  --bs-btn-focus-shadow-rgb: var(--brand-color-rgb);
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #b52951;
+  --bs-btn-active-bg: var(--brand-active-color);
   --bs-btn-active-border-color: #a92649;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #d93764;
-  --bs-btn-disabled-border-color: #d93764;
+  --bs-btn-disabled-bg: var(--brand-color);
+  --bs-btn-disabled-border-color: var(--brand-color);
 }
 
 .btn-outline-brand {
-  --bs-btn-color: #d93764;
-  --bs-btn-border-color: #d93764;
+  --bs-btn-color: var(--brand-color);
+  --bs-btn-border-color: var(--brand-color);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #d93764;
-  --bs-btn-hover-border-color: #d93764;
-  --bs-btn-focus-shadow-rgb: 217, 55, 100;
+  --bs-btn-hover-bg: var(--brand-color);
+  --bs-btn-hover-border-color: var(--brand-color);
+  --bs-btn-focus-shadow-rgb: var(--brand-color-rgb);
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #d93764;
-  --bs-btn-active-border-color: #d93764;
-  --bs-btn-disabled-color: #d93764;
+  --bs-btn-active-bg: var(--brand-color);
+  --bs-btn-active-border-color: var(--brand-color);
+  --bs-btn-disabled-color: var(--brand-color);
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #d93764;
+  --bs-btn-disabled-border-color: var(--brand-color);
 }
 
 .bg-brand {
   --bs-bg-opacity: 1;
-  background-color: rgba(217, 55, 100, var(--bs-bg-opacity));
+  background-color: rgba(var(--brand-color-rgb), var(--bs-bg-opacity));
 }
 
 .text-brand {
   --bs-text-opacity: 1;
-  color: rgba(217, 55, 100, var(--bs-text-opacity));
+  color: rgba(var(--brand-color-rgb), var(--bs-text-opacity));
 }
 
 .border-brand {
   --bs-border-opacity: 1;
-  border-color: rgba(217, 55, 100, var(--bs-border-opacity));
+  border-color: rgba(var(--brand-color-rgb), var(--bs-border-opacity));
 }

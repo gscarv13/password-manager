@@ -29,6 +29,37 @@
     }
   }
 
+  #entries-list {
+    a {
+      transition: all 0.2s ease-in-out;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+      margin-bottom: 0.25rem;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        background-color: rgba(var(--brand-color-rgb), 0.08);
+        transform: translateX(4px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(var(--brand-color-rgb), 0.2);
+
+        .entry-favicon {
+          transform: scale(1.05);
+        }
+
+        p,
+        span {
+          color: var(--brand-color);
+        }
+      }
+
+      &:active {
+        transform: translateX(2px);
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
   .entries-actions {
     &.card {
       display: flex;
