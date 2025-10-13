@@ -5,111 +5,111 @@ entries = [
   {
     name: "Google",
     url: "https://google.com",
-    username: "google_user@gmail.com",
+    username: "sarah.chen.dev@gmail.com",
     password: "google_password"
   },
   {
     name: "Facebook",
     url: "https://facebook.com",
-    username: "facebook_user",
+    username: "alex.rivera.92@gmail.com",
     password: "facebook_password"
   },
   {
     name: "Twitter",
     url: "https://twitter.com",
-    username: "twitter_user",
+    username: "@coffee_and_code",
     password: "twitter_password"
   },
   {
     name: "Amazon",
     url: "https://amazon.com",
-    username: "amazon_user",
+    username: "jamie.bookworm@yahoo.com",
     password: "amazon_password"
   },
   {
     name: "Apple",
     url: "https://apple.com",
-    username: "apple_user",
+    username: "m.thompson.design@icloud.com",
     password: "apple_password"
   },
 
   {
     name: "Microsoft",
     url: "https://microsoft.com",
-    username: "microsoft_user",
+    username: "david.kim.consultant@outlook.com",
     password: "microsoft_password"
   },
   {
     name: "GitHub",
     url: "https://github.com",
-    username: "github_user",
+    username: "pixel_pusher_dev",
     password: "github_password"
   },
   {
     name: "LinkedIn",
     url: "https://linkedin.com",
-    username: "linkedin_user",
+    username: "elena.martinez.pm@gmail.com",
     password: "linkedin_password"
   },
   {
     name: "Instagram",
     url: "https://instagram.com",
-    username: "instagram_user",
+    username: "wanderlust_maya",
     password: "instagram_password"
   },
   {
     name: "YouTube",
     url: "https://youtube.com",
-    username: "youtube_user",
+    username: "ryan.techreviews@gmail.com",
     password: "youtube_password"
   },
   {
     name: "Netflix",
     url: "https://netflix.com",
-    username: "netflix_user",
+    username: "movienight.crew@hotmail.com",
     password: "netflix_password"
   },
 
   {
     name: "Spotify",
     url: "https://spotify.com",
-    username: "spotify_user",
+    username: "indie.vibes.music@gmail.com",
     password: "spotify_password"
   },
   {
     name: "TikTok",
     url: "https://tiktok.com",
-    username: "tiktok_user",
+    username: "creative_zoe_art",
     password: "tiktok_password"
   },
   {
     name: "Twitch",
     url: "https://twitch.com",
-    username: "twitch_user",
+    username: "GamerGuru_Phoenix",
     password: "twitch_password"
   },
   {
     name: "Reddit",
     url: "https://reddit.com",
-    username: "reddit_user",
+    username: "curious_mind_42",
     password: "reddit_password"
   },
   {
     name: "Discord",
     url: "https://discord.com",
-    username: "discord_user",
+    username: "NightOwl#7834",
     password: "discord_password"
   },
   {
     name: "Steam",
-    url: "https://steam.com",
-    username: "steam_user",
+    url: "https://store.steampowered.com/",
+    username: "retro_gamer_ace",
     password: "steam_password"
   },
   {
     name: "Epic Games",
     url: "https://epicgames.com",
-    username: "epic_games_user",
+    username: "storm_chaser_91",
     password: "epic_games_password"
   }
 ]
